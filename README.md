@@ -1,6 +1,9 @@
 # wp-scan-slack
 A simple way to send the dump log of WP-Scan to your slack channel.
 
+Requires:Slack <b>Incoming WebHooks Integration</b> configured in a channel.<br>
+Requires:WP-Scan configured and working in your machine<br>
+
 For use this shell script you first need configure the "app.conf" with your personal data.<br>
 Example:<br>
 export bot_user_name=SomeBOTname<br>
