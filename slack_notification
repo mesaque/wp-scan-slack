@@ -1,13 +1,15 @@
 #!/bin/bash
 
-pretext=$1;
-fields=$2;
+pretext=$1
+fields=$2
+USERNAME="\"username\":\"$bot_user_name\","
+AVATAR="\"icon_url\":\"$bot_avatar\","
 
-text='There is no problem found.';
-color='good';
+text='There is no problem found.'
+color='good'
 
 if [ "$fields" ];then
-  color='warning';
+  color='warning'
   text='We found a problems.' 
 
   formated_fields=$(\
@@ -17,7 +19,7 @@ if [ "$fields" ];then
   field=",\"fields\":[$formated_fields]"
 fi
 
-fallback=$text;
+fallback=$text
 
 json="{ $USERNAME $AVATAR\
 \"fallback\": \"$fallback\",\
